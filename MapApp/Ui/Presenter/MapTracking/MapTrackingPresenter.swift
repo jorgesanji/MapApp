@@ -18,6 +18,7 @@ protocol MapTrackingPresenterOut : PresenterIn{
 protocol MapTranckingPresenterIn : PresenterOut{
 	func addPolyline(_ polyline:MKPolyline)
 	func zoomPolyline(_ polyline:MKPolyline)
+	func addPin(_ annotation:MKPointAnnotation)
 }
 
 class MapTrackingPresenter: BasePresenter {
@@ -52,6 +53,8 @@ class MapTrackingPresenter: BasePresenter {
 	}
 	
 	fileprivate func startLocationUpdates(){
+		self.track = Track()
+		track?.dateStart = Date()
 		initMotion()
 		locationManager?.fetchWithCompletion({ (location, error) in
 			if error == nil{
@@ -100,12 +103,14 @@ class MapTrackingPresenter: BasePresenter {
 	override func viewDidLoad() {
 		view?.viewController().navigationItem.title = R.string.localizable.tracking_title()
 		if track == nil{
-			self.track = Track()
-			track?.dateStart = Date()
-			view?.viewController().navigationItem.rightBarButtonItem = UIBarButtonItem(title: R.string.localizable.stop_tracking(), style: .plain, target: self, action:#selector(MapTrackingPresenter.stopTracking))
-			view?.viewController().navigationItem.leftBarButtonItem = UIBarButtonItem(title: R.string.localizable.cancel_action(), style: .plain, target: self, action:#selector(MapTrackingPresenter.cancelTracking))
+			let stopTrackingView = HolderView.create(title: R.string.localizable.stop_tracking(), titleColor: .white, backgroundColor: .primary, target: self, selector: #selector(MapTrackingPresenter.stopTracking))
+			view?.viewController().navigationItem.rightBarButtonItem = UIBarButtonItem(customView: stopTrackingView)
+			let cancelTrackingView = HolderView.create(title: R.string.localizable.cancel_action(), titleColor: .white, backgroundColor: .red, target: self, selector: #selector(MapTrackingPresenter.cancelTracking))
+			cancelTrackingView.width = 80
+			view?.viewController().navigationItem.leftBarButtonItem = UIBarButtonItem(customView: cancelTrackingView)
 			startLocationUpdates()
 		}else{
+			//TODO: Create polyline
 			var coordinates:[CLLocationCoordinate2D] = []
 			for location in (track?.locations)!{
 				coordinates.append(CLLocationCoordinate2D(latitude:location.latitude, longitude:location.longitude))
@@ -113,6 +118,16 @@ class MapTrackingPresenter: BasePresenter {
 			let polyline = MKPolyline(coordinates: &coordinates, count:coordinates.count)
 			(view as? MapTranckingPresenterIn )?.addPolyline(polyline)
 			(view as? MapTranckingPresenterIn )?.zoomPolyline(polyline)
+			
+			//TODO:Create end and start annotation
+			let coordinateStart = track?.locations.first
+			let coordinateEnd = track?.locations.last
+			let annotationStart = MKPointAnnotation()
+			annotationStart.coordinate = CLLocationCoordinate2D(latitude: (coordinateStart?.latitude)!, longitude: (coordinateStart?.longitude)!)
+			let annotationEnd = MKPointAnnotation()
+			annotationEnd.coordinate = CLLocationCoordinate2D(latitude: (coordinateEnd?.latitude)!, longitude: (coordinateEnd?.longitude)!)
+			(view as? MapTranckingPresenterIn )?.addPin(annotationStart)
+			(view as? MapTranckingPresenterIn )?.addPin(annotationEnd)
 		}
 	}
 	

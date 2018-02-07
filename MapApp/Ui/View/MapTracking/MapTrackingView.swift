@@ -33,6 +33,10 @@ class MapTrackingView : BaseView {
 		let polygon = MKPolygon(points: polyline.points(), count: polyline.pointCount)
 		mapView?.setRegion(MKCoordinateRegionForMapRect(polygon.boundingMapRect), animated: true)
 	}
+	
+	func addPin(_ annotation: MKPointAnnotation) {
+		mapView?.addAnnotation(annotation)
+	}
 }
 
 extension MapTrackingView : MKMapViewDelegate{

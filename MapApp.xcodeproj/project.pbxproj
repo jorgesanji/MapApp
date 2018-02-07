@@ -97,6 +97,7 @@
 		D8405C13202A34A40011EE3A /* SaveTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8405C12202A34A40011EE3A /* SaveTrack.swift */; };
 		D8405C18202A525C0011EE3A /* AppAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8405C17202A525C0011EE3A /* AppAccountManager.swift */; };
 		D8405C19202A6F5E0011EE3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8405C1B202A6F5E0011EE3A /* InfoPlist.strings */; };
+		D8405C22202AA78A0011EE3A /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8405C21202AA78A0011EE3A /* HolderView.swift */; };
 		D8B4F3E420222A040009AD94 /* MapAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4F3E320222A040009AD94 /* MapAppTests.swift */; };
 		D8B4F3EF20222A040009AD94 /* MapAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4F3EE20222A040009AD94 /* MapAppUITests.swift */; };
 		D8B4F40820223EC90009AD94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B4F40720223EC90009AD94 /* Assets.xcassets */; };
@@ -220,6 +221,7 @@
 		D8405C17202A525C0011EE3A /* AppAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAccountManager.swift; sourceTree = "<group>"; };
 		D8405C1A202A6F5E0011EE3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8405C1C202A6F610011EE3A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8405C21202AA78A0011EE3A /* HolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderView.swift; sourceTree = "<group>"; };
 		D8B4F3CB20222A040009AD94 /* MapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B4F3DA20222A040009AD94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8B4F3DF20222A040009AD94 /* MapAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -587,6 +589,14 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		D8405C20202AA7740011EE3A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				D8405C21202AA78A0011EE3A /* HolderView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		D8B4F3C220222A040009AD94 = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +733,7 @@
 		D8B4F40B20223F0F0009AD94 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D8405C20202AA7740011EE3A /* CustomView */,
 				D8405B3C2023A7D10011EE3A /* Base */,
 				D8405B4C2023BD840011EE3A /* Splash */,
 				D8405BA420289DAD0011EE3A /* MapTracking */,
@@ -1098,6 +1109,7 @@
 				D8405C0C202A13000011EE3A /* Date+Additions.swift in Sources */,
 				D8405B672023C5A90011EE3A /* CrossFadingTransition.swift in Sources */,
 				D8405C06202A0CB20011EE3A /* TrackCellView.swift in Sources */,
+				D8405C22202AA78A0011EE3A /* HolderView.swift in Sources */,
 				D8405BA720289DE30011EE3A /* MapTrackingPresenter.swift in Sources */,
 				D8405B9220279A4D0011EE3A /* SplashPresenter.swift in Sources */,
 				D8405B942027A3EB0011EE3A /* Windows+Transitions.swift in Sources */,

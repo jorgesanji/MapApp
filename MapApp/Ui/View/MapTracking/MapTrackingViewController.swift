@@ -22,4 +22,8 @@ extension MapTrackingViewController : MapTranckingPresenterIn{
 	func zoomPolyline(_ polyline:MKPolyline){
 		rootView.zoomPolyline(polyline)
 	}
+	
+	func addPin(_ annotation: MKPointAnnotation) {
+		rootView.addPin(annotation)
+	}
 }

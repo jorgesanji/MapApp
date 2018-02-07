@@ -18,7 +18,8 @@ class HomeViewController: MVPViewController<HomeView, HomePresenter>{
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.navigationItem.title = R.string.localizable.app_name()
-		self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: R.string.localizable.start_tracking(), style: .plain, target: self, action:#selector(HomeViewController.startTracking))
+		let holderView = HolderView.create(title: R.string.localizable.start_tracking(), titleColor: .white, backgroundColor: .primary, target: self, selector: #selector(HomeViewController.startTracking))
+		self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView:holderView)
 	}
 	
 	@objc func startTracking(){

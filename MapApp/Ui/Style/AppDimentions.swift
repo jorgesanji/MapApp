@@ -11,6 +11,9 @@ import UIKit
 
 struct AppDimentions{
 	
+	static let SIZE_TEXT_TITLE:CGFloat = 16
+	
 	static let SIZE_FONT_TITLE_NAME_APP:CGFloat = 20.0
 	static let SIZE_ROW:CGFloat = 70
+	static let SIZE_TITLE:CGFloat = 40
 }

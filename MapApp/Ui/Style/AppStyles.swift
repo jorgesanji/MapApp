@@ -41,6 +41,25 @@ class AppStyles {
 		// Set selected tint color on UITabBar
 		UITabBar.appearance().tintColor = .primary
 	}
+	
+	static func holderView(title:String, textColor:UIColor,
+					  backgroundColor:UIColor, selector:Selector) -> UIView{
+		let holderView = UIView()
+		holderView.frame = CGRect(x: 0, y: 0, width: CGFloat.greatestFiniteMagnitude, height: AppDimentions.SIZE_TITLE)
+		holderView.addBackgroundColor(backgroundColor, radius: AppDimentions.SIZE_TITLE)
+		let label = UILabel.newAutoLayout()
+		label.backgroundColor = .clear
+		label.textColor = textColor
+		label.font = UIFont.boldSystemFont(ofSize: AppDimentions.SIZE_TEXT_TITLE)
+		label.text = title
+		holderView.addSubview(label)
+		label.autoPinEdge(toSuperviewEdge: .top, withInset: 0.5)
+		label.autoPinEdge(toSuperviewEdge: .bottom, withInset: 0.5)
+		label.autoPinEdge(toSuperviewEdge: .left, withInset: 0.5)
+		label.autoPinEdge(toSuperviewEdge: .right, withInset: 0.5)
+		return holderView
+	}
+
 }
 
 extension UIView{
@@ -77,41 +96,16 @@ extension UIView{
 		buildBorder()
 		self.layer.shouldRasterize = true
 		self.layer.rasterizationScale = UIScreen.main.scale
-		
 	}
 	
-	func buildShadow(){
-		self.layer.shadowColor = UIColor.black.cgColor
-		self.layer.shadowRadius = 4.0
-		self.layer.shadowOffset = CGSize(width: 3, height: 3)
-		self.layer.shadowOpacity = 0.7
-	}
-	
-	func putShadowOnView(_ heightShadow:CGFloat? = 4){
+	func addBackgroundColor(_ color:UIColor, radius:CGFloat){
+		self.backgroundColor = .clear
 		self.layer.masksToBounds = false
-		self.layer.shadowOffset = CGSize(width:0, height:heightShadow!)
-		self.layer.shadowRadius = 1
-		self.layer.shadowOpacity = 0.25
-	}
-	
-	func buildCardStyle(viewTop:UIView) {
-		buildCardStyle(viewBottom:self, viewTop:viewTop)
-	}
-	
-	func buildCardStyle(viewBottom:UIView, viewTop:UIView) {
-		viewBottom.putShadow()
-		viewTop.layer.masksToBounds = false
-		viewTop.layer.cornerRadius = 8.0
-		viewTop.clipsToBounds = true
-	}
-	
-	func putShadow(){
-		self.layer.masksToBounds = false
-		self.layer.backgroundColor = UIColor.white.cgColor
-		self.layer.cornerRadius = 8.0
-		self.layer.shadowOffset = CGSize(width: -0.5, height: -0.5)
-		self.layer.shadowOpacity = 0.55
-		self.layer.shadowRadius = 2.0
+		self.layer.backgroundColor = color.cgColor
+		self.layer.cornerRadius = radius
+		self.layer.shouldRasterize = true
+		self.layer.borderColor = UIColor.clear.cgColor
+		self.layer.borderWidth = 0
+		self.layer.rasterizationScale = UIScreen.main.scale
 	}
 }
-
