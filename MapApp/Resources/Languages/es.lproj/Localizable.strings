@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  MapApp
+
+  Created by Jorge Sanmartin on 2/1/18.
+  Copyright © 2018 Jorge Sanmartin. All rights reserved.
+*/
+
+"app_name" = "MapApp";
+"tracking_title" = "Tracking";
+"cancel_action" = "Cancelar";
+"ok_action" = "Aceptar";
+"start_tracking" = "Iniciar tracking";
+"stop_tracking" = "Detener tracking";
+"track_number" = "RUTA %i";
+"start_date" = "Fecha inicio: %@";
+"end_date" = "Fecha final: %@";
+"title_stop_tracking" = "MapApp";
+"message_stop_tracking" = "¿Desea guardar el seguimiento de ruta?";
+"message_cancel_tracking" = "¿Desea cancelar el seguimiento de ruta?";
+"message_user_already_register" = "Usuario ya registrado en el KeyChain";
+"message_tracking_standing" = "Te recomendamos que te muevas para que sea util la app";
+"message_motion_disabled" = "Por favor ve a configuración y habilita la funcionalidad de actividad física en tu dispositivo";
+"message_empty" = "Lista vacia por favor cree una ruta";
+

@@ -1,0 +1,24 @@
+/*
+ Localizable.strings
+ MapApp
+ 
+ Created by Jorge Sanmartin on 2/1/18.
+ Copyright © 2018 Jorge Sanmartin. All rights reserved.
+ */
+
+"app_name" = "MapApp";
+"tracking_title" = "Tracking";
+"cancel_action" = "Cancel";
+"ok_action" = "Accept";
+"start_tracking" = "Start tracking";
+"stop_tracking" = "Stop tracking";
+"track_number" = "ROUTE %i";
+"start_date" = "Start date: %@";
+"end_date" = "End date: %@";
+"title_stop_tracking" = "MapApp";
+"message_stop_tracking" = "Do you want to save the path tracking?";
+"message_cancel_tracking" = "Do you want to cancel the path tracking?";
+"message_user_already_register" = "User already register on KeyChain";
+"message_tracking_standing" = "Recommend you move in order to track your route.";
+"message_motion_disabled" = "Please go to settings and enable motion feature on your device.";
+"message_empty" = "Emtpy list please create a route.";

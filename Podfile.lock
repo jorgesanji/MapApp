@@ -1,0 +1,67 @@
+PODS:
+  - Alamofire (4.6.0)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - Crashlytics (3.9.3):
+    - Fabric (~> 1.7.2)
+  - Fabric (1.7.2)
+  - KeychainSwift (10.0.0)
+  - Kingfisher (4.6.1)
+  - M13ProgressSuite (1.2.9)
+  - ObjectMapper (3.1.0)
+  - PureLayout (3.0.2)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - Realm (3.1.1):
+    - Realm/Headers (= 3.1.1)
+  - Realm/Headers (3.1.1)
+  - RealmSwift (3.1.1):
+    - Realm (= 3.1.1)
+  - RxSwift (4.1.2)
+  - SwiftMessages (4.1.0)
+  - Swinject (2.1.0)
+  - SwinjectStoryboard (1.1.2):
+    - Swinject (~> 2.1)
+  - ZoomImageView (0.4.0)
+
+DEPENDENCIES:
+  - AlamofireObjectMapper (~> 5.0)
+  - Crashlytics
+  - Fabric
+  - KeychainSwift
+  - Kingfisher (~> 4.0)
+  - M13ProgressSuite
+  - PureLayout
+  - R.swift
+  - RealmSwift
+  - RxSwift (~> 4.0)
+  - SwiftMessages
+  - Swinject (= 2.1)
+  - SwinjectStoryboard (= 1.1.2)
+  - ZoomImageView
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
+  Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
+  KeychainSwift: f9f7910449a0c0fd2cabc889121530dd2c477c33
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  M13ProgressSuite: ea9f7263e73e9215e6849dfa54e29ee0ad6a145c
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
+  RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
+  Swinject: 85e468ac75c5c2d234076f98c591d57d56bc64bc
+  SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
+  ZoomImageView: 25559e92b53db499681706b61024bd4906e57abe
+
+PODFILE CHECKSUM: 72a2ff40a77ddd36c97446727e159d003fab9e05
+
+COCOAPODS: 1.2.0

@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  MapApp
+
+  Created by Jorge Sanmartin on 2/5/18.
+  Copyright © 2018 Jorge Sanmartin. All rights reserved.
+*/
+
+"NSLocationWhenInUseUsageDescription" = "Localizacion usada para trackear rutes del usuario";
+"NSMotionUsageDescription" = "Motion es usado para activar o desactivar el tracking de las rutas del usuario ";
+
